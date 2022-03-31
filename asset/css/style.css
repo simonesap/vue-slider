@@ -10,3 +10,11 @@
 .h_100 {
     height: 100%;
 }
+
+:root{
+    --bg-trasparent: transparent;
+}
+
+button{
+    background-color: var(--bg-trasparent);
+}

@@ -13,8 +13,10 @@
     <div id="root">
         <div class="container" :class="classContainer">
             <div class="row h_100 justify-content-center align-items-center">
-                <div class="col-10 text-center">
-                    <img class="img-fluid" v-bind:class="classiImg" :src="media">
+                <div class="col-10 text-center d-flex justify-content-between">
+                    <button id="left" class="border-0" @click="getRightMethod()"><i class="fa-solid fa-angle-left"></i></button>
+                    <img class="img-fluid rounded" v-bind:class="classiImg" :src="media">
+                    <button id="right" class="border-0"><i class="fa-solid fa-angle-right"></i></button>
                 </div>
             </div>
         </div>
