@@ -14,9 +14,13 @@
         <div class="container" :class="classContainer">
             <div class="row h_100 justify-content-center align-items-center">
                 <div class="col-10 text-center d-flex justify-content-between">
-                    <button id="left" class="border-0" @click="getLeft()"><i class="fa-solid fa-angle-left"></i></button>
-                    <img :src="mediaImg[0]" class="img-fluid rounded" v-bind:class="classiImg">
-                    <button id="right" class="border-0" @click="getRight()"><i class="fa-solid fa-angle-right"></i></button>
+                    <button class="border-0" ><i @click="nextPhotoLeft" class="fa-solid fa-angle-left"></i></button>
+                    <img :src="mediaImg[counterImg]" class="img-fluid rounded" v-bind:class="classiImg">
+                    <button class="border-0" @click="nextPhotoRight"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+                <!--Dots-->
+                <div class="d-flex justify-content-center align-items-center">
+                    <i class="fa-solid fa-circle mx-3" @click="clickDots(index)" :class="(index == counterImg) ? 'text-primary' : '' " v-for="(photo, index) in mediaImg"></i>
                 </div>
             </div>
         </div>
